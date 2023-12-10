@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>See Weather</title>
+  </head>
+  <body>
+    <loader-page></loader-page>
+    <nav-bar></nav-bar>
+
+    <div class="container mt-5">
+      <div class="box-grid">
+        <div class="left rounded-3">
+          <div id="location" class="location rounded-3 p-4"></div>
+
+          <div>
+            <div id="text-five-day"></div>
+            <div id="five-days" class="five-days rounded-3 row m-0"></div>
+          </div>
+        </div>
+
+        <div class="right rounded-3">
+          <div
+            id="higlight-today"
+            class="higlight-today rounded-3 pt-3 pb-0 pe-3 ps-3"
+          ></div>
+
+          <div style="width: 100%">
+            <div id="text-today-at"></div>
+            <div class="today-at rounded-3 p-3">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper mb-3" id="today-at-content"></div>
+              </div>
+
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="wind-speed"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <end-bar></end-bar>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: transparent;
+  backdrop-filter: blur(20px);
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: 3.5fr 8.5fr;
+  grid-template-areas: "left right";
+  gap: 2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.box-content {
+  height: 30rem;
+}
+
+.text-temp {
+  font-size: 4rem;
+}
+
+.degree {
+  font-size: 2rem;
+}
+
+.higlight-1 {
+  display: grid;
+  grid-template-columns: 6.5fr 5.5fr;
+  grid-template-areas: "air-quality-index sunrise-sunset";
+  gap: 1rem;
+}
+
+.higlight-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "humadity pressure visibility fells-like";
+  gap: 1rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  position: relative;
+  height: 100%;
+  width: 10rem;
+  min-height: 10rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location,
+.higlight-today,
+.five-days,
+.today-at,
+.swiper-slide {
+  background: transparent;
+  backdrop-filter: blur(8px);
+  color: white;
+  border: 1px solid white;
+}
+
+.footer {
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  background: transparent;
+  color: white;
+}
+
+.search {
+  width: 25rem;
+  position: relative;
+}
+
+.overlay-search {
+  display: none;
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background-color: white;
+  z-index: 9999;
+}
+
+.background {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.background-hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+section.wrapper {
+  padding: 40px 0;
+}
+
+div.spinner {
+  -moz-animation: rotate 10s infinite linear;
+  -webkit-animation: rotate 10s infinite linear;
+  animation: rotate 10s infinite linear;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 142px;
+  height: 142px;
+}
+div.spinner i {
+  -moz-animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+  -webkit-animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+  animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+  -moz-transform-origin: 50% 100% 0;
+  -webkit-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  border: solid 6px transparent;
+  border-bottom: none;
+}
+div.spinner i:nth-child(1) {
+  -moz-animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+  -webkit-animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+  animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+  width: 44px;
+  height: 22px;
+  margin-top: -22px;
+  margin-left: -22px;
+  border-color: #68b6e4;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+}
+div.spinner i:nth-child(2) {
+  -moz-animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+  -webkit-animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+  animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+  width: 58px;
+  height: 29px;
+  margin-top: -29px;
+  margin-left: -29px;
+  border-color: #3293ca;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+}
+div.spinner i:nth-child(3) {
+  -moz-animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+  -webkit-animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+  animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+  width: 72px;
+  height: 36px;
+  margin-top: -36px;
+  margin-left: -36px;
+  border-color: #193a8b;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+}
+div.spinner i:nth-child(4) {
+  -moz-animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+  -webkit-animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+  animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+  width: 86px;
+  height: 43px;
+  margin-top: -43px;
+  margin-left: -43px;
+  border-color: #42579f;
+  border-top-left-radius: 54px;
+  border-top-right-radius: 54px;
+}
+div.spinner i:nth-child(5) {
+  -moz-animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+  -webkit-animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+  animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+  width: 100px;
+  height: 50px;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-color: #4357a0;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
+@-moz-keyframes rotate {
+  to {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .search {
+    width: 25rem;
+  }
+
+  .button-location-p {
+    display: none;
+  }
+
+  .button-location svg {
+    margin: 0.2rem 0;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right";
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .higlight-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "air-quality-index"
+      "sunrise-sunset";
+    gap: 1rem;
+  }
+
+  .higlight-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "humadity pressure"
+      "visibility fells-like";
+    gap: 1rem;
+  }
+
+  .search {
+    width: 20rem;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    width: 18rem;
+    position: relative;
+  }
+}
